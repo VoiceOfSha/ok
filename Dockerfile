@@ -1,4 +1,4 @@
-FROM python:3.9.16-slim-buster
+FROM python:3.9.16
 
 RUN apt update && apt upgrade -y
 RUN apt install git -y
@@ -9,4 +9,4 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /TamilanBotsZ
 WORKDIR /TamilanBotsZ
 COPY . .
-CMD ["/bin/bash", "/start.sh"]
+CMD ["/start.sh"]
